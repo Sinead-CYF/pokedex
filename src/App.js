@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 const Logo = () => {
-  const appName = "Pokedex";
+  const appName = "Sinead's Pokedex";
   return (
     <header>
       <h1>Welcome to the {appName}</h1>;
@@ -15,8 +15,19 @@ const Logo = () => {
   );
 };
 
-const FavPokemon = () => {
-  return <p>My favorite Pokemon is Squirtle</p>;
+const BestPokemon = () => {
+  const abilities = ["Agility", "Speed", "Adaptability"];
+
+  return (
+  <div>
+    <p>My favorite Pokemon is Squirtle</p>
+    <ul>
+      {abilities.map((element) => (
+      <li key={element} class = "abilities">{element}</li>
+      ))}
+    </ul>
+  </div>
+  );
 };
 
 const CaughtPokemon = () => {
@@ -28,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <Logo />
-      <FavPokemon />
+      <BestPokemon />
       <CaughtPokemon />
     </div>
   );
