@@ -1,25 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CaughtPokemon = () => {
+  let [caught, setCaught] = useState([]);
 
-const [caught, setCaught] = useState(0);
+  function getRandomPokemon() {
+    const pokemon = [
+      "Charizard",
+      "Mewtwo",
+      "Pikachu",
+      "Hypno",
+      "Jigglypuff",
+      "Magmar",
+      "Meowth",
+      "Onyx",
+      "Snorlax",
+      "Mew",
+      "Eevee",
+      "Squirtle",
+      "Gyarados",
+      "Pidgeotto",
+      "Alakazam",
+      "Jolteon",
+      "Charmander",
+      "Bulbasaur",
+      "Arcanine",
+      "Poliwrath",
+      "Machamp",
+      "Scyther",
+      "Golbat",
+      "Hitmonchan",
+      "Kadabra",
+      "Ninetales",
+      "Machoke",
+      "Charmeleon",
+      "Wartortle",
+      "Rapidash",
+      "Beedrill",
+      "Raichu",
+      "Growlithe",
+      "Geodude",
+      "Metapod",
+      "Poliwhirl",
+      "Dugtrio",
+      "Pidgeot",
+      "Electrode",
+      "Raticate",
+
+    ];
+
+    const random = Math.floor(Math.random() * pokemon.length);
+    return pokemon[random];
+  }
+
+  function catchPokemon() {
+    setCaught(caught.concat(getRandomPokemon()));
+  }
 
   const date = new Date().toLocaleDateString();
-  return <p>Caught 0 Pokemon on {date}</p>;
+  return (
+    <div className="bottom-area-wrapper">
+      <p className = "caughtPoke-num">{caught.length}</p>
+      <p className = "caughtPoke-para">Pokemon caught on:</p>
+      <p className = "date">{date}</p>
+      <button onClick={catchPokemon}>Gotta catch 'em all !</button>
+      <ul>
+        {caught.map((pokemon, index) => {
+          return <li key={index}>A wild {pokemon}!</li>;
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default CaughtPokemon;
-
-/*In this exercise, we'll add a button to the CaughtPokemon component which adds one to 
-  the number of Pokemon you have caught:
-
-Caught 0 Pokemon on 20/11/2021Catch Pokemon
-
-Open the pokedex React application and open the CaughtPokemon.js file.
-Create a new state variable with useState. It should be named caught and be initialised to 0
-Within the JSX, there should be a "hard-coded" number 0. Replace it with your new caught state.
-Add a button to the component with an onClick handler that calls a function called catchPokemon.
-Create the catchPokemon function and have it update the caught state so that it is increased by 1 on each click.
-Click here if you are stuck.
-Write down the things that will happen when you click the button. Compare your list with another trainee and discuss.
-Click here for a hint. */

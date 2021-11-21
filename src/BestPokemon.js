@@ -3,11 +3,11 @@ import React from "react";
 const BestPokemon = (props) => {
 
   return (
-    <div>
-      <p>My favorite Pokemon is Squirtle</p>
+    <div className = "favorite-poke-wrapper">
+      <p>My favorite Pokemon is Pidgeotto <br/> who's strengths include: </p>
       <ul>
         {props.abilities.map((element) => (
-          <li key={element} className="abilities">
+          <li key={element}>
             {element}
           </li>
         ))}
