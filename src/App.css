@@ -22,11 +22,10 @@ img {
 p {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 
 ul {
-  margin-bottom: 1rem;
+  margin: 1.5rem;
   list-style: none;
 }
 
@@ -72,32 +71,14 @@ button:hover {
   transform: scale(1.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.city-area-wrapper {
+  background-color: rgb(54, 54, 85);
+  padding: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+  margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
