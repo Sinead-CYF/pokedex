@@ -23,14 +23,16 @@ const CaughtPokemon = () => {
       <p className="caughtPoke-num">{caught.length}</p>
       <p className="caughtPoke-para">Pokemon caught on:</p>
       <p className="date">{date}</p>
-      <input
-        type="text"
-        name="caught"
-        placeholder="I caught ..."
-        value={pokemonNameInput}
-        onChange={handleInputChange}
-      />
-      <button onClick={catchPokemon}>Gotta catch 'em all !</button>
+      <div class="caught-area-wrapper">
+        <input
+          type="text"
+          name="caught"
+          placeholder="I caught ..."
+          value={pokemonNameInput}
+          onChange={handleInputChange}
+        />
+        <button onClick={catchPokemon}>Gotta catch 'em all !</button>
+      </div>
       <ul>
         {caught.map((pokemon, index) => {
           return <li key={index}>A wild {pokemon}!</li>;

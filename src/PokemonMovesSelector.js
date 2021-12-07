@@ -12,7 +12,7 @@ function PokemonMovesSelector() {
   }
 
   return (
-    <div>
+    <div className = "buttons-wrapper">
       <button onClick={handleBulbasaurClick}>Fetch Bulbasaur</button>
       <button onClick={handleCharmanderClick}>Fetch Charmander</button>
       {id ? <PokemonMoves pokemonId={id} /> : null}

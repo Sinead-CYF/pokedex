@@ -52,16 +52,24 @@ li {
   margin-bottom: 0.5rem;
 }
 
+.caught-area-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
 .date {
   font-size: 1.5rem;
 }
 
 button {
   font-size: 1.3rem;
-  margin: 2em;
+  margin: 3em auto;
   border: 3px solid white;
   padding: 1em;
-  border-radius: 9999px;
+  border-radius: 999px;
   background-color: rgb(248, 0, 0);
   color: white;
   outline: 3px solid black;
@@ -71,13 +79,21 @@ button:hover {
   transform: scale(1.1);
 }
 
+.buttons-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
 .city-area-wrapper {
   background-color: rgb(54, 54, 85);
   padding: 2rem;
 }
 
 input {
-  margin: 1rem;
+  margin: o.5rem;
+  padding: 0.7em;
+  font-size: 1.5rem;
+  border-radius: 10px;
 }
 
 
